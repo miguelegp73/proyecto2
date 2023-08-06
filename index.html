@@ -18,9 +18,9 @@
         <nav class="nav" id="nav">
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
             <ul class="nav-list">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#hablemos">Hablemos</a></li>
-                <li><a href="#misProyectos">Mis Proyectos</a></li>
+                <li class="menuPpal"><a href="#inicio" class="active">Inicio</a></li>
+                <li class="menuPpal"><a href="#hablemos">Hablemos</a></li>
+                <li class="menuPpal"><a href="#misProyectos">Mis Proyectos</a></li>
                 <button id="dark" class="oscuro">
                     <span #id="sol"><i class="fa-solid fa-sun"></i></span>
                     <span><i class="fa-solid fa-moon"></i></span>
@@ -77,14 +77,17 @@
                     permitido desarrollar un pensamiento lógico y fortalecer las habilidades mencionadas anteriormente.
                 </p>
             </article>
-            <div id="misProyectos">
+        </section>
+        <section id="misProyectos">
+            <article class="proyectos">
                 <h2>Quieres ver algunos de mis proyectos</h2>
-                <button class="presionaAqui">Presiona Aqui</button>
-            </div>
+                <a href="https://github.com/miguelegp73" target="_blank"><button class="presionaAqui">Presiona
+                        Aqui</button></a>
+            </article>
+        </section>
 
-
-
-            <section class="grid">
+        <div class="contenedor-grid">
+            <div class="grid">
                 <div class="card">
                     <img src="img/4.png" alt="">
                     <div class="botones">
@@ -99,17 +102,11 @@
                         <a href="#" class="btn secundario">Ver Pagina</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="img/6.png" alt="">
-                    <div class="botones">
-                        <a href="#" class="btn primario">GitHub</a>
-                        <a href="#" class="btn secundario">Ver Pagina</a>
-                    </div>
-                </div>
-            </section>
-        </section>
+            </div>
+        </div>
 
     </main>
+
     <footer>
         <p>Miguel Enrique Garcia Pinto<br>
             Cel. 11-79580001</p>

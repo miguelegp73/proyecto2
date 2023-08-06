@@ -16,3 +16,13 @@ modoOscuro.addEventListener("click", function () {
     document.body.classList.toggle("dark");
     modoOscuro.classList.toggle("active");
 })
+
+////Para fija el fondo en le menu
+const navList = document.querySelectorAll(".menuPpal");
+navList.forEach(function (item) {
+    item.addEventListener("click", function(e) {
+        const currentItem = document.querySelector(".active");
+        currentItem.classList.remove("active");
+        e.target.classList.add("active");
+    });
+});

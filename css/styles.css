@@ -34,12 +34,20 @@ header {
   list-style-type: none;
   display: flex;
   gap: 20px;
+  padding: 5px 5px;
   cursor: pointer;
 }
 
 .nav-list li a {
   text-decoration: none;
   color: #1c1c1c;
+  border-radius: 5px;
+}
+
+.menuPpal .active{
+  background-color: #014ba0;
+  color: #ffffff;
+  padding: 5px 5px;
 }
 
 .abrir-menu,
@@ -183,9 +191,6 @@ footer {
   cursor: pointer;
 }
 
-/*.iconos button i:hover {
-}*/
-
 .boton {
   background-color: #014ba0;
   color: #fbfbfb;
@@ -257,19 +262,19 @@ h2 {
   background-color: #c5c7bc;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   border: grey solid;
 }
 
 /*ESTILOS PARA LAS TARJETAS*/
 
 .grid {
-  -display: -ms-grid;
+  display: -ms-grid;
   display: grid;
   grid-gap: 40px 20px;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 40px 0 40px;
+  padding: 40px 0 0px;
 }
 
 .grid .card {
@@ -307,7 +312,7 @@ h2 {
   margin-top: 10px;
   display: -ms-grid;
   display: grid;
-  grid-gap: 20px;
+  grid-gap:10px;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   position: absolute;
@@ -347,7 +352,7 @@ h2 {
 /*APLICANDO LOS MEDIAQUERIES*/
 
 /*Descktop*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   #inicio {
     display: flex;
     padding-top: 100px;
@@ -373,14 +378,13 @@ h2 {
     font-size: 22px;
   }
   .articulo2 {
-    padding: 120px 80px;
+    padding: 100px 80px;
   }
 
   .nav-list li a:hover {
-    background-color: #014ba0;
-    gap: 30px;
-    padding: 5px 0px;
-    -font-weight: bold;
+    background-color: #3d71ab;
+    padding: 5px 5px;
+    font-weight: bold;
     transition: 0.3s;
     border-radius: 5px;
   }
@@ -415,6 +419,24 @@ h2 {
   #misProyectos{
     margin-bottom: 80px;
   }
+
+.grid {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  .grid .card {
+    height: 180px;
+    min-height: 100%;
+  }
+
+  .card {
+    width: 430px;
+    bottom: 40px;
+  }
+
 }
 
 /*Tablet*/
@@ -469,10 +491,11 @@ h2 {
 
   .grid .card {
     min-height: 150px;
+    width: 200px;
   }
 
   .grid .card .botones {
-    margin-top: -30px;
+    margin-top: 10px;
   }
 }
 
@@ -558,7 +581,7 @@ h2 {
 
   .nav-list {
     flex-direction: column;
-    /*align-items: end;*/
+    align-items: center;
     background-color: #014ba0;
     padding: 20px 0;
     border-radius: 15px;
@@ -593,33 +616,39 @@ h2 {
     font-size: 18px;
   }
 
+footer p{
+    font-size: 12px;
+  }
+
   .iconos button i {
-    font-size: 25px;
+    font-size: 15px;
     padding-left: 10px;
   }
 
   .grid {
-    max-width: 100%;
-    justify-content: center;
-    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
   }
 
   .grid .card {
-    min-height: 100px;
+    height: 60px;
+    min-height: 100%;
   }
 
   .card {
-    width: 150px;
+    width: 160px;
   }
 
   .botones {
     top: -70px;
-    left: -29px;
-  }
-
-  .botones a {
-    gap: 10px;
-  }
+    justify-content: center;
+    grid-gap: 2px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+}
 
   .oscuro {
     width: 70px;
